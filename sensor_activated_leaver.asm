@@ -9,24 +9,25 @@
 ;-------------------startup blinking------------
 
 
-		MOV A,#2H
+		MOV R1,#2H
 		
 START:	MOV P1,#0C0H
 		LCALL DELAY
 		MOV P1,#0C1H
 		LCALL DELAY
-		DJNZ A,START
+		DJNZ R1,START
+		
 ;----------------------------------------------------
 
 ;-------------Main program starts-------------------
 
 		;-------------setting initial positions sensing left or right delay for program to wait till you adjust ----------------
 
-		MOV C,P1.8;Sensing left alignment
+		MOV C,P1.7;Sensing left alignment
 		LCALL DELAY
 		LCALL DELAY
 		JC HITLEFT
-		MOV C,P1.7;Sensing right alignment
+		MOV C,P1.6;Sensing right alignment
 		LCALL DELAY
 		LCALL DELAY
 		JC HITRIGHT
@@ -34,26 +35,45 @@ START:	MOV P1,#0C0H
 		
 		
 		
-HITLEFT: LJMP HALFDELAY
+HITLEFT: MOV P1,#0C4H
+		 LJMP PULSE
 		 MOV P1,#0C9H; The leaver stats moving leftward hit
 		 NOP
-		 MOV C,P1.8
+		 MOV C,P1.7
 		 JC HITRIGHT
 		 SJMP HITLEFT
 		 
 		 
 		 
-HITRIGHT: LJMP HALFDELAY
+HITRIGHT:MOV P1,#0C4H
+		 LJMP PULSE
 		 MOV P1,#0C4H; The leaver stats moving leftward hit
 		 NOP
-		 MOV C,P1.8
+		 MOV C,P1.6
 		 JC HITLEFT
 		 SJMP HITRIGHT
 		
 		 
-HALFDELAY:
+PULSE:	MOV R7,#03H
+PUL1:	MOV R6,#0FFH
+PUL2:	DJNZ R6,PUL2
+		DJNZ R7,PUL1
+		RET
+		
 		 
 
 
 
-DELAY:
+DELAY:	MOV R7,#08H
+DEL1:	MOV R6,#0FFH
+DEL2:	MOV R5,#0FFH
+DEL3:	DJNZ R5,DEL3
+		DJNZ R6,DEL2
+		DJNZ R7,DEL1
+		RET
+	 
+
+
+
+
+

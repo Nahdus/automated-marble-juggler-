@@ -1,0 +1,93 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        10/05/2017  00:21:05  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE sensor_activated_leaver.obj TO sensor_activated_leaver
+
+
+INPUT MODULES INCLUDED:
+  sensor_activated_leaver.obj (SENSOR_ACTIVATED_LEAVER)
+
+
+LINK MAP OF MODULE:  sensor_activated_leaver (SENSOR_ACTIVATED_LEAVER)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     005AH     ABSOLUTE     
+
+
+
+SYMBOL TABLE OF MODULE:  sensor_activated_leaver (SENSOR_ACTIVATED_LEAVER)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        SENSOR_ACTIVATED_LEAVER
+  C:004FH         SYMBOL        DEL1
+  C:0051H         SYMBOL        DEL2
+  C:0053H         SYMBOL        DEL3
+  C:004DH         SYMBOL        DELAY
+  C:0024H         SYMBOL        HITLEFT
+  C:0034H         SYMBOL        HITRIGHT
+  D:0090H         SYMBOL        P1
+  C:0046H         SYMBOL        PUL1
+  C:0048H         SYMBOL        PUL2
+  C:0044H         SYMBOL        PULSE
+  C:0002H         SYMBOL        START
+  C:0000H         LINE#         12
+  C:0002H         LINE#         14
+  C:0005H         LINE#         15
+  C:0008H         LINE#         16
+  C:000BH         LINE#         17
+  C:000EH         LINE#         18
+  C:0010H         LINE#         26
+  C:0012H         LINE#         27
+  C:0015H         LINE#         28
+  C:0018H         LINE#         29
+  C:001AH         LINE#         30
+  C:001CH         LINE#         31
+  C:001FH         LINE#         32
+  C:0022H         LINE#         33
+  C:0024H         LINE#         38
+  C:0027H         LINE#         39
+  C:002AH         LINE#         40
+  C:002DH         LINE#         41
+  C:002EH         LINE#         42
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/05/2017  00:21:05  PAGE 2
+
+
+  C:0030H         LINE#         43
+  C:0032H         LINE#         44
+  C:0034H         LINE#         48
+  C:0037H         LINE#         49
+  C:003AH         LINE#         50
+  C:003DH         LINE#         51
+  C:003EH         LINE#         52
+  C:0040H         LINE#         53
+  C:0042H         LINE#         54
+  C:0044H         LINE#         57
+  C:0046H         LINE#         58
+  C:0048H         LINE#         59
+  C:004AH         LINE#         60
+  C:004CH         LINE#         61
+  C:004DH         LINE#         67
+  C:004FH         LINE#         68
+  C:0051H         LINE#         69
+  C:0053H         LINE#         70
+  C:0055H         LINE#         71
+  C:0057H         LINE#         72
+  C:0059H         LINE#         73
+  -------         ENDMOD        SENSOR_ACTIVATED_LEAVER
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 005AH BYTE ( 4%) *
+******************************************************************************
+
+Program Size: data=8.0 xdata=0 code=90
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
